@@ -1,0 +1,287 @@
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+  overflow-x: hidden;
+}
+
+.logo{
+  width:120px;
+  height: 80px;
+}
+.logoheader{
+  width: 100px;
+  height: 70px;
+  margin-left: 38px;
+}
+
+
+.logodesign{
+  width: 200px;
+  height: 82px;
+  background-color: #004085;
+  transform: skewY(185deg);
+}
+
+.nav{
+  position: absolute;
+  top: 0;
+background:transparent;
+width: 100%;
+z-index: 2;
+
+}
+.img-cover{
+  width: 100%;
+  height: 99vh;
+ background-position: center;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.cover{
+ 
+  top: 0;
+ width: 100%;
+ height: 99vh;
+ 
+}
+.offer{
+  position: absolute;
+  top: 42%;
+  left: 17%;
+  width: 64%;
+  color: #a88657;
+}
+
+
+.book{
+  position: absolute;
+  top: 80%;
+  left: 44%;
+  background-color:#004085;
+}
+
+.cards{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #F1F0E8;
+}
+.wave{
+  width: 500%;
+  position: relative;
+  height: 40px;
+  background-image: url(https://smartdemowp.com/yacher/wp-content/themes/yacher/assets/images/icon/footer-jik-jak.png);
+  background-repeat: repeat-x;
+  animation: movewive   50s linear infinite;
+  
+}
+.ship{
+    position: relative;
+    bottom: 70px;
+    left: 40%;
+    width: 80px;
+    animation: moveship 2s linear infinite;
+}
+
+@keyframes movewive{
+  100%{transform: translateX(-2000px);}
+
+}
+@keyframes moveship{
+  100%{transform:translateY(-5px) ;}
+  50%{transform:translateY(0px) ;
+
+  }
+  0%{
+    transform:translateY(-5px) ;
+  }
+}
+.imagecard{
+  height: 300px !important;
+  
+}
+.cardoffer {
+  position: relative;
+}
+.test{
+  position: absolute;
+  left: 844px;
+  width: 166px;
+  height: 295px;
+  background-color: YELLOW;
+  display: none;
+ 
+}
+.cardoffer:hover{
+  cursor: pointer;
+ 
+}
+.cardoffer:hover .test{
+display: block;
+box-shadow: -9px 5px 14px;
+
+}
+.cards2{
+  background-color:#F1F0E8;
+}
+.svg{
+  width: 60px;
+  height: 60px;
+  fill: #a88657;
+}
+.svgs{
+  background-image: url(https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-repeat: no-repeat;
+  background-size: 100% 80px;
+  height: 100px;
+}
+
+.items {
+  position: absolute;
+  top:44px;
+  left: 12%;
+
+}
+.title{
+  position: absolute;
+  top: 4px;
+  left: 33%;
+}
+.svg2{
+  width: 21%;
+  height: 40%;
+  fill: #D3C596;
+  
+}
+.img-svgs{
+  width: 427px;
+  height: 453px;
+}
+
+.border-img{
+  border: 10px solid white;
+  height: 472px; 
+
+}
+/* BOOKING */
+
+.nav2{
+  background-color: #004085;
+  width: 22%;
+  height: 99vh;
+  position: sticky;
+  top: 0;
+}
+/*  ABOUT */
+.about-i i{
+  font-size: 50px;
+  color: #D60D45;
+  height: 60px;
+  width: 60px;
+  line-height: 1;
+  padding: 5px;
+  transition: all ease-in-out 0.3s;
+
+ }
+ .image-team{
+  width: 100%;
+  height:  278px;
+ }
+ .team-content {
+  background: #D60D45;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+  position: relative;
+  bottom: 20px;
+  text-align: center;
+  }
+.cards-team{
+  background-color: #fff4e6;
+}
+/* CONTACT */
+
+.img-contact{
+  width: 400px;
+  height: 80vh;
+}
+.form-contact{
+  width: 400px;
+  padding: 20px;
+  background-color:#004085;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px #a88657;
+ 
+}
+.form-login{
+  position: relative;
+  top: 21%;
+  left: 33%;
+  width: 400px;
+  padding: 20px;
+  background-color:#004085;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px #5786a8;
+ 
+}
+.cover-login{
+  background-image: url(https://images.pexels.com/photos/1838680/pexels-photo-1838680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  width: 100%;
+  height: 100vh;
+}
+/* reservation */
+.enjoy{
+  position: absolute;
+  top: 64%;
+  left: 17%;
+  width: 64%;
+  color: #ffffff;
+}
+.items-reserv{
+  height: 90vh;
+  background-color: #f7efd4;
+
+}
+
+  
+
+
+.form-reserv{
+ padding: 50px;
+  height: auto;
+  WIDTH: 588px;
+  background-color: aqua;
+  border-radius: 34px;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+.main-footer{
+ 
+  bottom: 0;
+  background-image:linear-gradient(rgba(8, 13, 76, 0.2),rgba(0,0,0,0.8)),url(https://smartdemowp.com/yacher/wp-content/uploads/2020/02/discover-bg-3.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+    color: #868da5;
+    width: 100%;
+    height: 70vh;
+   
+}
+.images{
+
+  width: 460px;
+}
