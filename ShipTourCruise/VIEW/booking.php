@@ -44,126 +44,86 @@
 </div>
 <!-- CAROUSELS END -->
 <!-- nav search -->
-<section class="d-flex flex-row-reverse mt-4 ">
 
-<nav class="navbar nav2 navbar-expand-lg  navbar-light">
-  <div class="container-fluid h-100 d-flex flex-column justify-content-around gap-5">
-  <input list=test>
-        <datalist id="test">
-            <option value="a">
-            <option value="b">
-            <option value="c">
-            <option value="d">
-            <option value="e">
-                
-        </datalist>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav d-flex h-100 flex-column gap-3 me-auto mb-2 mb-lg-0">
-      <li class="nav-item dropdown dropstart">
-          <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            PORT
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-    
-      </ul>
-      
+<div class="search-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="search-form" name="gs" method="submit" role="search" action="#">
+            <div class="row">
+              <div class="col-lg-2">
+                <h4>Sort Deals By:</h4>
+              </div>
+              <div class="col-lg-4">
+                  <fieldset>
+                      <select name="Location" class="form-select" aria-label="Default select example" id="chooseLocation" onchange="this.form.click()">
+                          <option selected="">Destinations</option>
+                          <option type="checkbox" name="option1" value="Italy">Italy</option>
+                          <option value="France">France</option>
+                          <option value="Switzerland">Switzerland</option>
+                          <option value="Thailand">Thailand</option>
+                          <option value="Australia">Australia</option>
+                          <option value="India">India</option>
+                          <option value="Indonesia">Indonesia</option>
+                          <option value="Malaysia">Malaysia</option>
+                          <option value="Singapore">Singapore</option>
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-4">
+                  <fieldset>
+                      <select name="Price" class="form-select" aria-label="Default select example" id="choosePrice" onchange="this.form.click()">
+                          <option selected="">Price Range</option>
+                          <option value="100">$100 - $250</option>
+                          <option value="250">$250 - $500</option>
+                          <option value="500">$500 - $1,000</option>
+                          <option value="1000">$1,000 - $2,500</option>
+                          <option value="2500+">$2,500+</option>
+                      </select>
+                  </fieldset>
+              </div>
+              <div class="col-lg-2">                        
+                  <fieldset>
+                      <button class="border-button">Search Results</button>
+                  </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
 
 
 <!-- nav search -->
 
 
   <div  class="row gap-5 w-100 mb-5 cards    justify-content-center ">
-<div class="card  shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<!-- --------------- -->
+  <?php foreach($cruises as $row){ ?>
 
-<div class="card shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Card image cap">
+
+<div class="card text-center shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
+  <img class="card-img-top" src="<?php url('Public/IMAGE2/'.$row['image'])?>" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title"><?php echo $row['name']?></h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+   <div class="d-flex">
+   <i class="fa-solid fa-location-dot"></i>
+    <p><?php echo $row['port_departeure'] ?></p>
+   </div>
+    <h4><b><?php echo"PERSON/".$row['price']."$"?></b></h4>
+    <a href="<?php url('reservation/index/'.$row['id_c'])?>" class="btn btn-primary">Go somewhere</a>
   </div>
-</div>
-<!-- -------------- -->
-<div class="card shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+</div> 
+
+<!-- --------------- -->
+  <?php }?>
+
 
 </div>
 <!-- ---------------------- -->
-</section>
+
 
 
 

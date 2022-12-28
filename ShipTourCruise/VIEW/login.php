@@ -4,17 +4,16 @@
 <body>
 <div class="cover-login container-fluid">
 
-<form class="form-login justify-content-center  ">
-  <div class="mb-5 mt-xl-5 text-center mt-sm-0">
-  <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
-    <input type="email" placeholder=" Email address" class="form-control" id="exampleInputEmail1" aria- 
-      describedby="emailHelp">
+<form class="form-login justify-content-center  " METHOD="POST" action="<?php url('login/checklogin')?>">
+  <div class="mb-3 mt-xl-5 text-center mt-sm-0">
+  <label for="exampleInputEmail1" class="form-label text-light">Username</label>
+    <input type="text" name="username" placeholder="Username " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  <div class="mb-5 mt-xl-5  text-center mt-sm-0">
-    <label for="exampleInputPassword1"   class="form-label text-light">Password</label>
-    <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+  <div class="mb-5  text-center mt-sm-0">
+    <label for="exampleInputPassword1"    class="form-label text-light">Password</label>
+    <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
   </div>
-  <a class="btn text-light  bg-primary" href="">Submit</a>
+  <button class="btn text-light bg-primary"  type="submit" name="login_btn">Submit</button>
 </form>
 </div>
 

@@ -8,6 +8,7 @@ define("model",ROOT_PATH.'MODEL'.DS);
 define("view",ROOT_PATH.'VIEW'.DS);
 define("P",ROOT_PATH.'Public'.DS);
 define('BURL',"http://localhost/ShipTourCruise/");
+
 require (ROOT_PATH.'/model/database.php');
 require  (ROOT_PATH.'/helper.php');
 

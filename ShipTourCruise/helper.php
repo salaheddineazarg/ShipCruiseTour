@@ -6,6 +6,7 @@ function url($url=''){
 }
 
 function url2($url=''){
+    
     return BURL.$url;
 }
 ?>

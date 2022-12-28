@@ -104,9 +104,9 @@
 <div class=" mb-4 mt-3 cards2 p-5 w-100 ">
 <div class="card cardoffer shadow mx-auto   mb-3" style="max-width: 80%; 
 height:300px;">
-  <div class="row ">
+  <div class="row h-100 ">
     <div class="col-md-4">
-      <img src="https://modactivity.travelerwp.com/wp-content/uploads/2022/05/Rectangle-7-min.png" class="img-fluid imagecard rounded-start" alt="...">
+      <img src="https://modactivity.travelerwp.com/wp-content/uploads/2022/05/Rectangle-7-min.png" class="img-fluid  h-100 imagecard rounded-start" alt="...">
     </div>
     <div class="col-md-8 justify-content-between ">
       <div class="card-body mb-xl-5 mb-sm-0 text-center">

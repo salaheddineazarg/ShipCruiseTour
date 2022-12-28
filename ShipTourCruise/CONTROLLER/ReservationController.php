@@ -1,12 +1,16 @@
 <?php
 
-class ReservationController
+class ReservationController 
 {
-    public function index(){
+    public function index($id){
      
     
-        $data['title']="login page";
-        View::load('reservation',$data);
+ 
+        $db= new cruise();
+        $data['trajets']=$db->getAllTrajet($id);
+        $data1['getrow']=$db->getrow($id);
+        View::load('reservation',$data,$data1);
     }
-}
+    }
+
 ?> 

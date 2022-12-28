@@ -4,122 +4,106 @@
 
 
 
-<footer class="main-footer card-footer d-flex flex-column justify-content-around ">
-     
- <section class="d-flex justify-content-around flex-wrap">   		
-			
-           <div class="d-flex flex-column">
-                <div class="mb-lg-3 mb-sm-0">
-                    <a href="">
-                        <img  class="logo " src="<?php url('Public/IMAGE2/logo.png') ?>" alt="Awesome Image">
-                    </a>
-                </div>
-                
-                <div class=" text-light">
-                    <ul>
-                        <li class="mb-lg-3 mb-sm-0">
-                            <span class="icon fa fa-map-marker-alt"></span> Langong <br>26, Old Brozon Mall, Newyrok <br>NY 10005</li>
-                        <li class="mb-lg-3 mb-sm-0">
-                            <span class="icon fa fa-phone-alt"></span>
-                            Call us <a class="text-light" href="tel:http://555-626-0234">555-626-0234</a></li>
-                        <li class="mb-lg-3  mb-sm-0">
-                            <span class="icon fa fa-envelope"></span>
-                            <a class="text-light"  href="">support@example.com</a>
-                        </li>
-                    </ul>
-                </div>
-                    <div class="social-links">
-                    <ul class="clearfix d-flex gap-4  bg-lightx">
-                        <li><a href="" target="_blank"><span class="fab fa-facebook-f"></span></a></li>
-                        <li><a href="" target="_blank"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="" target="_blank"><span class="fab fa-youtube"></span></a></li>
-                        <li><a href="" target="_blank"><span class="fab fa-linkedin"></span></a></li>
-                    </ul>
-                </div>
-                 </div>
-                       <!------------------------------------------------------------------------  -->
-            
-    
-    
-    <div class="d-flex w-25 text-center flex-column ">
-        
-            
-            <h4 class="mb-lg-4 mb-sm-0">What We Do</h4>
-           <div class="d-flex justify-content-around">
-			<ul class="d-flex   flex-column">
-				<li class="page_item  mb-lg-3 mb-sm-0 page-item-109"><a  href="http://el.commonsupport.com/newwp/lanong/about-us/">About Us</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-659"><a href="http://el.commonsupport.com/newwp/lanong/coming-soon/">Coming Soon</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-364"><a href="http://el.commonsupport.com/newwp/lanong/contact/">Contact</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-103"><a href="http://el.commonsupport.com/newwp/lanong/destinatons/">Destinatons</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-539"><a href="http://el.commonsupport.com/newwp/lanong/obsesion/">Obsesion</a></li>
-            </ul>
-            <ul class="d-flex flex-column">
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-556"><a href="http://el.commonsupport.com/newwp/lanong/tour-style-01/">Tour Style 01</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-563"><a href="http://el.commonsupport.com/newwp/lanong/tour-style-02/">Tour Style 02</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-561"><a href="http://el.commonsupport.com/newwp/lanong/tour-style-03/">Tour Style 03</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-566"><a href="http://el.commonsupport.com/newwp/lanong/tour-style-04/">Tour Style 04</a></li>
-            <li class="page_item mb-lg-3 mb-sm-0 page-item-538"><a href="http://el.commonsupport.com/newwp/lanong/west-port-z12/">West Port z12</a></li>
-			</ul>
-            </div>
-			
-     </div>
-            
-               	
-        <!-- Our Gallery -->
-             
-            <div class=" d-flex align-items-center  flex-column ">
-                <h4 class="mb-lg-4 mb-sm-0" >Our Portfolio</h4>
-                     
-             
-                <div class=" row images">
-                   	        
-          
-           <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/12.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/11.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/10.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/9-1.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/8-1.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/7-1.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-                        <figure class="image col">
-                <img width="85" height="85" src="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-85x85.jpg" class="attachment-sailing_85x85 size-sailing_85x85 wp-post-image" alt="" loading="lazy" srcset="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-85x85.jpg 85w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-150x150.jpg 150w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-370x370.jpg 370w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-70x70.jpg 70w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-170x170.jpg 170w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-135x135.jpg 135w, http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1-80x80.jpg 80w" sizes="(max-width: 85px) 100vw, 85px">                <a class="lightbox-image" href="http://el.commonsupport.com/newwp/lanong/wp-content/uploads/2020/02/6-1.jpg" data-fancybox="gallery"><span class="icon flaticon-cross"></span></a>
-            </figure>
-				
-        </div>
-             </div>
-    </section>    
- 
-        <!-- Footer Bottom -->
-         <div class="d-flex border-top border-white justify-content-between">
-                <div class="copyright">
-                    Copyright © 2022 Langong. All Rights Reserved.
+<!-- Footer -->
+<footer class="text-center p-5 text-lg-start main-footer text-muted">
+  <!-- Section: Social media -->
 
-                </div>
-                <div class="bottom-links">
-                	<a href="#">Terms of Use</a> 
-                    <a href="#">Private Policy</a>                        
-                  </div>
-          </div>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section>
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <img class="logo" src="<?php url('Public/IMAGE2/logo.png') ?>" alt="">
+        
+         
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    
+  <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  
+  <!-- Copyright -->
+  </section>
+  <!-- Section: Links  -->
 
 </footer>
+<!-- Footer -->
 
 
 
 <!-- JavaScript Bundle with Popper -->
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script defer src="<?php url('Public/js.js')?>"></script>
 </body>
 </html>

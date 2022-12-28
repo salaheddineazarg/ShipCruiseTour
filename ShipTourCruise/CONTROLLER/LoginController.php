@@ -1,42 +1,44 @@
 
 <?php
+// controller/AuthController.php
+class LoginController extends database {
+  private $model;  
 
-class LoginController extends DatabaseController {
-   public function index() 
-  
-   {  
-    $data['title']="login page";
-    View::load('login',$data);
-       
-   }}
-  //     
-  //  
-   // -----------------------------------------
-  //  public function admin()
-  //  {
-     
-  //   if(isset($_POST['submitlogin']))
-  //   {
-  //     $emaillogin=$_POST['emaillogin'];
-  //     $passwordlogin=$_POST['passwordlogin'];
-  //     $admin=new admin;
-  //     $auth=$admin-> check_login($emaillogin,$passwordlogin);
-  //  if(mysqli_num_rows($auth)>0) { 
-     
-          
-  //       $url=url2('gestion/index');
-  //     header("Location:".$url); 
-      
+  public function index() 
 
+  { 
      
-  //   }else{ 
-          
-  //       header("Location:index"); 
-  //       $_SESSION['login']=false;
+     View::load('login');
+ }
+
+//   public function __construct() {
+//     $this->model = new user();
+//   }
+
+//   public function checklogin() {
+//     if (isset($_POST['login_btn'])) {
+//       // Attempt to log the user in
+//        $this->model->login($_POST['username'], $_POST['password']);
+//       if ($this->model) {
+//         // If the login was successful, set the session variables and redirect to the appropriate page
+//         $_SESSION['username'] = $_POST['username'];
+//         $_SESSION['role'] =  $this->model;
+//         $_SESSION['success'] = "You are now logged in";
+//         if ( $this->model == 'admin') {
          
-  //      }
-  //  }
-  //  }
-   
-  // }
+          
+//           header('location:'.url2('gestion/index'));
+//         } else {
+//           header('location:'.url2('home/index'));
+//         }
+//       } else {
+        
+//         echo" <script>alert('Invalid username or password')</script> ";
+//        sleep(1);
+//         header('location:'.url2('login/index'));
+//       }
+//     }
+//   }
+ }
+
   ?>
