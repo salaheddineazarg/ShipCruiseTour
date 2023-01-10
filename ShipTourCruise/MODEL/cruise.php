@@ -25,19 +25,24 @@ class cruise extends database
    public function getAllCruises()
    {
       $this->conn = $this->connection();
-      $this->select = mysqli_query($this->conn, 'SELECT * FROM cruise');
+      $this->select = mysqli_query($this->conn, 'SELECT c.*,s.name as shipname FROM cruise c,ship s WHERE c.id_s=s.id_s') ;
 
       if ($this->select) {
          return $this->select;
       }
+     
+
    }
+// -------------------------------------------------------------------------------------------
+
    public function getAllPorts()
    {
       $this->conn = $this->connection();
       $this->select = mysqli_query($this->conn, 'SELECT * FROM port');
 
       if ($this->select) {
-         return $this->select;
+         $result=mysqli_fetch_all( $this->select,MYSQLI_ASSOC);
+         return $result;
       }
    }
    public function getAllTrajet($id)
@@ -57,18 +62,38 @@ class cruise extends database
       $this->select = mysqli_query($this->conn, 'SELECT * FROM ship');
 
       if ($this->select) {
-         return $this->select;
+         return mysqli_fetch_all( $this->select,MYSQLI_ASSOC);
       }
    }
 
+  
+   // ------------------------------FILTRE----------------------------------------------------------
+   public function  filtre($port,$date,$ship)
+   {
+      $this->conn = $this->connection();
+         
+   
+      $this->select = mysqli_query($this->conn, "SELECT DISTINCT c.*,s.name as shipname,p.Country,t.id_p FROM cruise c,ship s ,port p,trajet t WHERE c.id_s=s.id_s AND p.id_p=t.id_p AND t.id_c=c.id_c AND c.port_departeure='$port' AND '$date ' < c.date_departure AND s.name='$ship';" );
+   
+
+      if ($this->select) {
+        
+         
+         return mysqli_fetch_all( $this->select,MYSQLI_ASSOC);;
+        
+      }else {
+         
+       return false;
+      }
+   }
 
    // -----------------------------------------------------------------------------------------------------------
 
-   public function insertcruise($name,$desc, $price, $image, $nights, $port_depart, $date,$datefinal, array $trajet)
+   public function insertcruise($name,$desc, $price, $image, $nights, $port_depart, $date,$datefinale,$id_s, array $trajet)
    {
       $this->conn = $this->connection();
-      $this->add = mysqli_query($this->conn, "INSERT INTO `cruise` (name,description,price,image,number_nights,port_departeure,date_departure,date_arrival) 
-                          VALUES('$name','$desc',$price,'$image',$nights,'$port_depart','$date','$datefinale')");
+      $this->add = mysqli_query($this->conn, "INSERT INTO `cruise` (name,description,price,image,number_nights,port_departeure,date_departure,date_arrival,id_s) 
+                          VALUES('$name','$desc',$price,'$image',$nights,'$port_depart','$date','$datefinale',$id_s)");
 
         
 
@@ -101,7 +126,7 @@ class cruise extends database
 
 
    // ------------------------------------------------------------------------------------------------------------------
-   public function deleteproduct($id)
+   public function deletecruise($id)
    {
 
 
@@ -160,11 +185,10 @@ public function updateport($id_c,$id_p)
    {
 
       $this->conn = $this->connection();
-        $s="UPDATE cruise SET name ='$name',price=$price , number_nights=$nights , port_departeure ='$port_depart',date_departure = $date WHERE id_c=$id ";
-        var_dump($s);
-        die();
+        
+      
      
-      $this->update = mysqli_query($this->conn,);
+      $this->update = mysqli_query($this->conn,"UPDATE cruise SET name ='$name',price=$price , number_nights=$nights , port_departeure ='$port_depart',date_departure = '$date' WHERE id_c=$id ");
 
       if ($this->update) {
         
@@ -224,6 +248,41 @@ public function updateport2($id_c,$id_p)
          return $this->$ajouteship;
       }
 
+   }
+   public function deleteport($id)
+   {
+
+
+      $this->conn = $this->connection();
+
+
+      $this->delete = mysqli_query($this->conn, "DELETE FROM `port` WHERE id_p=" . $id . "");
+
+      if ($this->delete) {
+         $url = url2('Dashbord/index');
+       
+         header("Location:$url");
+      } else {
+         echo "<script>alert('YOUR PORT IS DOESNT DELETED')</script>";
+      }
+   }
+
+   public function deleteship($id)
+   {
+
+
+      $this->conn = $this->connection();
+
+
+      $this->delete = mysqli_query($this->conn, "DELETE FROM `ship` WHERE id_s=" . $id . "");
+
+      if ($this->delete) {
+         $url = url2('Dashbord/index');
+       
+         header("Location:$url");
+      } else {
+         echo "<script>alert('YOUR SHIP IS DOESNT DELETED')</script>";
+      }
    }
 }
 

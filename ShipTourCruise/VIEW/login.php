@@ -4,7 +4,11 @@
 <body>
 <div class="cover-login container-fluid">
 
+
+
+
 <form class="form-login justify-content-center  " METHOD="POST" action="<?php url('login/checklogin')?>">
+<i class="fa-solid fa-user text-light "> sign up</i>
   <div class="mb-3 mt-xl-5 text-center mt-sm-0">
   <label for="exampleInputEmail1" class="form-label text-light">Username</label>
     <input type="text" name="username" placeholder="Username " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

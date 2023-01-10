@@ -34,6 +34,9 @@ width: 100%;
 z-index: 2;
 
 }
+.nav2{
+  background-color: #004085;
+}
 .img-cover{
   width: 100%;
   height: 105vh;
@@ -346,7 +349,13 @@ box-shadow: -9px 5px 14px;
   width: 100%;
   height: 135vh;
 }
-
+/* DASHBORD */
+ .dashbord-table a {
+  list-style: none;
+  text-decoration: none;
+  color:#007bfe ;
+  cursor: pointer;
+ }
 
 
 

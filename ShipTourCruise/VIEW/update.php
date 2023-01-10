@@ -1,7 +1,6 @@
 <?php require(view.'include/header.php') ?>
-<?php require(view.'include/navbar.php') ?>
-
 <body>
+<?php require(view.'include/navbar.php') ?>
 <div class="cover-update container-fluid">
 
 <form class="d-flex flex-column gap-3 form-update"   enctype="multipart/form-data" method="POST"  action="<?php url('gestion/updateproducts/'.$getrow['id_c'])?>" >

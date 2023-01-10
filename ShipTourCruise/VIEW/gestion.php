@@ -1,9 +1,8 @@
 <?php require(view.'include/header.php') ?>
-<?php  
 
-
-?>
 <body class="bg-dark">
+  
+
     
 <nav class="navbar  navbar-expand-lg navbar-dark">
   <div class="container-fluid">
@@ -22,17 +21,14 @@
           <a class="nav-link text-light "  href="<?php url('booking/index') ?>">Booking</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light "  data-bs-toggle="modal" data-bs-target="#exampleModalc" data-bs-whatever="@mdo" href=" <?php url('gestion/add') ?>">Add Cruise</a>
+          <a class="nav-link text-light "  href="<?php url('Dashbord/index') ?>">Dashbord</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light "  data-bs-toggle="modal" data-bs-target="#exampleModalp" data-bs-whatever="@fat" href=" <?php url('gestion/add') ?>">Add Port</a>
+        <a type="button" class="nav-link text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Add Cruise</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light "  data-bs-toggle="modal" data-bs-target="#exampleModals" data-bs-whatever="@getbootstrap" href=" <?php url('gestion/add') ?>">Add Ship</a>
+          <a class="nav-link text-light "  href="<?php url('gestion/logout') ?>">Logout</a>
         </li>
-       
-      
-        
       </ul>
       
     </div>
@@ -63,7 +59,7 @@
   
    <div class="d-flex">
    <i class="fa-solid fa-ship"></i>
-    <p><?php echo $row['port_departeure'] ?></p>
+    <p><?php echo strtoupper($row['shipname'])?></p>
    </div>
     <h4><b><?php echo"PERSON/".$row['price']."$"?></b></h4>
   
@@ -77,20 +73,18 @@
 <!-- --------------- -->
   <?php }?>
 
-
+  <?php require(view.'include/formadd.php') ?>
 </div>
 <!-- --------------- -->
 
 
 
 
-<?php require(view.'include/formadd.php') ?>
-<?php require(view.'include/formport.php') ?>
-<?php require(view.'include/formship.php') ?>
 
 
-<!-- JavaScript Bundle with Popper -->
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>
 

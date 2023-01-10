@@ -21,7 +21,7 @@
           <a class="nav-link text-light "  href=" <?php url('contact/index') ?>">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light "  href=" <?php url('gestion/index') ?>">Login</a>
+          <a class="nav-link text-light "  href=" <?php url('login/index') ?>">Login</a>
         </li>
         
       </ul>

@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body">
 
-      <form class="d-flex flex-column gap-3"  enctype="multipart/form-data" method="POST"  action="<?php url('gestion/addport')?>" >
+      <form class="d-flex flex-column gap-3"  enctype="multipart/form-data" method="POST"  action="<?php url('dashbord/addport')?>" >
     
 
   <input   name="name" type="text" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1" required>

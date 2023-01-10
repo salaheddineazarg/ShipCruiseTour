@@ -4,22 +4,27 @@ class GestionController  {
   
  public function index() 
 
- { 
-  
+ {
+    if ($_SESSION['role'] != 'admin') {
+      header('location:' . url2('login/index'));
+    } else if ($_SESSION['role'] == 'client') {
+      header('location:' . url2('home'));
+    }
    
    $db= new cruise();
     $data['cruises']=$db->getAllCruises();
-    $data1['ports']=$db->getAllPorts();
-    $data2['ships']=$db->getAllShips();
+    $data['ports']=$db->getAllPorts();
+    $data['ships']=$db->getAllShips();
+    $data['cardship']=$db->getAllShipcard();
 
-    View::load('gestion',$data,$data1,$data2);
+    View::load('gestion',$data);
+
       
    
     
  
 }
 //  -----------------------------------------------
-
 
 // -------------------------------------------------------
  public function add ()
@@ -51,7 +56,9 @@ class GestionController  {
    }
      }
      $cruises=new cruise();
-     $cruises->insertcruise($_POST['name'],$_POST['desc'], $_POST['price'],$newImageName,$_POST['nights'],$_POST['port_depart'],$_POST['date'],$_POST['datefinale'],$_POST['checkport']);
+     $cruises->insertcruise($_POST['name'],$_POST['desc'], $_POST['price'],$newImageName,$_POST['nights'],$_POST['port_depart'],$_POST['date'],$_POST['datefinal'],$_POST['ship'],$_POST['checkport']);
+     
+
       header("location:".url2('gestion/index'));
  }
  
@@ -65,10 +72,11 @@ public function delete($id)
 
 $delete=new cruise();
 
-$delete->deleteproduct($id);
+$delete->deletecruise($id);
 
 
 }
+
 
 
    
@@ -113,38 +121,14 @@ $delete->deleteproduct($id);
     header("Location:".url2('gestion/index') );
 }
    }
+   public function logout () {
+    $_SESSION['role'] = false;
 
-   public function addport(){
-
-    if(isset($_POST['submit'])){
-
-    $port = new cruise();
-    $port->ajouteport($_POST['country']);
-    header("location:".url2('gestion/index'));
-
-    }else{
-      echo "ERROR";
-    }
-    
-
-
+    header("location:".url2('home'));
    }
-   public function addship(){
 
-    if(isset($_POST['submit'])){
+ 
 
-    $ship = new cruise();
-    $ship->ajouteship($_POST['name'],$_POST['rooms'],$_POST['places']);
-    header("location:".url2('gestion/index'));
-   
-
-    }else{
-      echo "ERROR";
-    }
-    
-
-
-   }
 }
 
 

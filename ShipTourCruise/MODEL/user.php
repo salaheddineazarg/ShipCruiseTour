@@ -1,36 +1,38 @@
 <?php
-// class user extends database {
-//   protected $db;
+class user extends database
+{
+  protected $conn;
 
-//   public function __Construct()
-//    {
+  public function __Construct()
+  {
 
-//       $this->db = $this->connection();
-//    }
+    $this->conn = $this->connection();
+  }
 
-//   public function login( $username, $password) {
-//     $username = $this->db->real_escape_string( $username);
-//     $password = $this->db->real_escape_string(sha1($password));
+  public function login($username, $password)
+  {
+    $this->conn = $this->connection();
 
-//     // Check if the user is an administrator
-//     $query = "SELECT * FROM user WHERE username=' $username' AND role='admin' AND password='$password'";
-//     $result = $this->db->query($query);
-//     if ($result->mysqli_num_rows == 1) {
-//       // If the user is an administrator, return 'admin'
-//       return 'admin';
-//     } else {
-//       // If the user is not an administrator, check if they are a client
-//       $query = "SELECT * FROM user WHERE username=' $username' AND role='client' AND password='$password'";
-//       $result = $this->db->query($query);
-//       if ($result->num_rows == 1) {
-//         // If the user is a client, return 'client'
-//         return 'client';
-//       } else {
-//         // If the user is neither an administrator nor a client, return false
-//         return false;
-//       }
-//     }
-//   }
-// }
+    $username1 = htmlspecialchars(trim(strtolower($username)));
+    $password1 = htmlspecialchars(trim(strtolower(sha1($password))));
+    // Check if the user is an administrator
+
+    $result = mysqli_query($this->conn, "SELECT * FROM user WHERE username='$username1' AND password='$password1'  AND role='admin' ");
+    
+    if (mysqli_num_rows($result) ==1 ) {
+
+      return 'admin';
+    } else {
+      // If the user is not an administrator, check if they are a client
+      $result = mysqli_query($this->conn, "SELECT * FROM user WHERE username='$username1' AND password='$password1' AND role='client'  ");
+      if (mysqli_num_rows($result)> 0) {
+
+        return 'client';
+      } else {
+         return false;
+      }
+    }
+  }
+}
 
 ?>
