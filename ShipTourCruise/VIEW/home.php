@@ -1,13 +1,15 @@
-<?php require(view.'include/header.php') ?>
+<?php require(view.'include/header.php') ;
+
+?>
 
 <body>
-
 <?php require(view.'include/navbar.php') ?>
+
 
 <!-- end nav -->
 
 <div class="cover">
-  <img class="img-cover" src=" http://lamaro.like-themes.com/wp-content/uploads/2018/02/inner_header-3.jpg" alt="">
+  <img class="img-cover" src=" https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
   <div  class="offer text-center">
     <h1>OFFERS 30%</h1>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident quis iusto doloremque ducimus molestias quos voluptate, corrupti sit quasi quod voluptates itaque enim non. Expedita nemo dicta id corporis consequatur!</p>
@@ -15,11 +17,16 @@
  <a class="btn text-light book" href="<?php url('booking/index') ?>">BOOK NOW </a>
 </div>
 
-<section class="d-flex mt-4 flex-column align-items-center  gap-4">
-  <h1 class="">THE BEST PLACE</h1>
-  <canvas class="w-25 bg-primary " style="height:10px;"></canvas>
-  <div  class="row gap-5 p-4 w-100 mb-5 cards    justify-content-center ">
-  <div class="col-lg-3 shadow-lg col-md-6">
+
+
+
+
+
+<section class=" d-flex  flex-column align-items-center  mt-5  container-fluide    ">
+<h1 class="title-h1">The Best Place</h1>
+  <div  class="row gap-5 p-4 w-100 mb-5    justify-content-center ">
+
+  <div class="col-lg-3 cards col-md-6">
 <div class="team-item">
 <div class="team-image">
 <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
@@ -32,7 +39,7 @@
 </div>
 <!-- --------------- -->
 
-<div class="col-lg-3 shadow-lg col-md-6">
+<div class="col-lg-3 cards  col-md-6">
 <div class="team-item">
 <div class="team-image">
 <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
@@ -44,7 +51,7 @@
 </div>
 </div>
 <!-- -------------- -->
-<div class="col-lg-3 shadow-lg col-md-6">
+<div class="col-lg-3 cards  col-md-6">
 <div class="team-item">
 <div class="team-image">
 <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
@@ -55,7 +62,7 @@
 </div>
 </div>
 </div>
-<div class="col-lg-3 shadow-lg col-md-6">
+<div class="col-lg-3 cards  col-md-6">
 <div class="team-item">
 <div class="team-image">
 <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
@@ -66,18 +73,19 @@
 </div>
 </div>
 </div>
-<div class="col-lg-3 shadow-lgcol-md-6">
+<div class="col-lg-3 cards  col-md-6">
 <div class="team-item">
 <div class="team-image">
 <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
 </div>
-<div class="place-content">
+
+<div class="place-content ">
 <h3>MIAMI</h3>
 <p>Top Place</p>
 </div>
 </div>
 </div>
-<div class="col-lg-3 shadow-lg col-md-6">
+<div class="col-lg-3 cards col-md-6">
 <div class="team-item">
 <div class="team-image">
 <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
@@ -91,52 +99,38 @@
 <!-- ---------------------- -->
 </section>
 
-<div class="wave">
-</div>
-<img class="ship" src="<?php url('Public/IMAGE2/ship.png') ?>" alt="">
-<!-- ================================================================================= -->
 
-<section class="d-flex flex-column align-items-center  gap-4">
-  <h1 class="">THE BEST OFFERS</h1>
-  <canvas class="w-25 bg-primary " style="height:10px;"></canvas>
-<div class=" mb-4 mt-3 cards2 p-4 w-100 h-100 ">
+<section class="d-flex  flex-column align-items-center  gap-4">
+  <h1 class="title-h1">THE BEST OFFERS</h1>
+ 
+<div class=" mb-4 mt-3  p-4 w-100 h-100 ">
+ <?php foreach($cruises as $row) {?>
 
-<div class="card text-center cardoffer shadow mx-auto    mb-3" style="max-width: 60%;">
+
+<div class="card text-center  cardoffer   mb-3" style="max-width: 60%;">
   <div class="row  h-100 ">
     <div class="col-md-4">
-      <img src="<?php url('Public/IMAGE2/image1.jpg') ?>" class="img-fluid h-100 rounded-start" alt="...">
+      <img src="<?php url('Public/IMAGE2/'.$row['image']) ?>" class="img-fluid h-100 rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body ">
-        <h2 class="card-title">CRUISE NAME</h2>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <H3>PERSON/400$
+        <h2 class="card-title"><?php echo $row['name'] ?></h2>
+        <p class="card-text"><?php echo $row['description'] ?></p>
+        <H3>PERSON/<?php echo $row['price'] ?>$
        </H3>
        <a class="btn btn-reserv btn-lg bg-primary text-light " href="#reserv">RESEVE NOW</a>
 </div>  
 </div> 
 </div>
 </div>
+ <?php } ?>
 
-<div class="card cardoffer text-center shadow mx-auto  mb-3" style="max-width: 60%; ">
-  <div class="row h-100 ">
-    <div class="col-md-4 ">
-      <img src="<?php url('Public/IMAGE2/image1.jpg') ?>" class="img-fluid h-100 rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h2 class="card-title">Card title</h2>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <H3>PERSON/400$
-       </H3>
-       <a class="btn btn-reserv btn-lg bg-primary text-light " href="#reserv">RESEVE NOW</a>
-        </div>  
-  </div> 
-  </div>
-  </div>
 
 </div>
 </section>
+
+
+
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 <section class="d-flex mb-4 sides position-relative" style="height:98vh;">
@@ -297,9 +291,6 @@
   </div>
   </div>
 </section>
-
-
-
 
 
 

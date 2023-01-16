@@ -11,7 +11,7 @@ class BookingController {
          $data['ships']=$db->getAllShips();
          View::load('booking',$data);
      
-       }else{ 
+       }else if(empty($_POST['submit'])){ 
          $db= new cruise();
          $data['cruises']=$db->getAllCruises();
          $data['ports']=$db->getAllPorts();

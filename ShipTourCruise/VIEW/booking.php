@@ -5,6 +5,7 @@
 <?php require(view.'include/header.php') ?>
 
 <body>
+<?php require(view.'include/navbar.php') ?>
 
   
 
@@ -103,35 +104,45 @@
 <!-- nav search -->
 
 
-  <div  class="row gap-5 w-100 mb-5 cards    justify-content-center ">
-  <?php foreach($cruises as $row){ ?>
+  <div  class="row gap-5 w-100 mb-5    justify-content-center ">
+  <div class=" mb-4 mt-3  p-4 w-100 h-100 ">
+ <?php foreach($cruises as $row) {?>
 
 
-    <div class="card text-center shadow-lg col-xl-3 col-sm-4 " style="width: 18rem;">
-  <img class="card-img-top" src="<?php url('Public/IMAGE2/'.$row['image'])?>" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $row['name']?></h5>
-    <p class="card-text"><?php echo $row['description']?></p> 
-    <p><i> Start From*</i></p>
+<div class="card text-center  cardoffer container   mb-3" style="max-width: 60%;">
+  <div class="row  h-100 ">
+    <div class="col-md-4">
+      <img src="<?php url('Public/IMAGE2/'.$row['image']) ?>" class="img-fluid h-100 rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body ">
+        <h2 class="card-title"><?php echo $row['name'] ?></h2>
+        <p class="card-text"><?php echo $row['description'] ?></p>
+       
+       <p><i> Start From*</i></p>
+      <div class="d-flex gap-4">
    <div class="d-flex">
    <i class="fa-solid fa-location-dot"></i>
     <p><?php echo $row['port_departeure'] ?></p>
    </div>
   
-   <div class="d-flex">
+   <div class="d-flex ">
    <i class="fa-solid fa-ship"></i>
     <p><?php echo strtoupper($row['shipname'])?></p>
    </div>
-    <h4><b><?php echo"PERSON/".$row['price']."$"?></b></h4>
-  
-    <div clas="d-flex">
-    <a href="<?php url('gestion/update/'.$row['id_c'])?>" class="btn btn-primary"  >UPDATE</a>
-    <a href="<?php url('gestion/delete/'.$row['id_c'])?>" class="btn btn-primary">DELETE</a>
   </div>
-  </div>
+   <H3>PERSON/<?php echo $row['price'] ?>$
+       </H3>
+      
+</div>
+ <a class="btn btn-reserv btn-lg bg-primary text-light " href="#reserv">RESEVE NOW</a>  
 </div> 
-<!-- --------------- -->
-  <?php }?>
+</div>
+</div>
+ <?php } ?>
+
+
+</div>
 
 
 </div>

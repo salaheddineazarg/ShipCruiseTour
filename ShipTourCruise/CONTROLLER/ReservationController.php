@@ -8,8 +8,8 @@ class ReservationController
  
         $db= new cruise();
         $data['trajets']=$db->getAllTrajet($id);
-        $data1['getrow']=$db->getrow($id);
-        View::load('reservation',$data,$data1);
+        $data['getrow']=$db->getrow($id);
+        View::load('reservation',$data);
     }
     }
 

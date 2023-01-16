@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    font-family: "Poppins",sans-serif;
 }
 body{
   overflow-x: hidden;
@@ -57,25 +58,32 @@ z-index: 2;
   top: 42%;
   left: 17%;
   width: 64%;
-  color: #a88657;
+  color: #ffffff;
+  font-size: large;
+  font-weight: 500;
 }
 
 
 .book{
   position: absolute;
-  top: 80%;
+  top: 88%;
   left: 44%;
   background-color:#004085;
 }
 
+.title-h1{
+  width: 96%;
+  font-size: 50px;
+  font-weight: 500;
+  font-style: italic;
+  font-family: "cooper",sans-serif;
+  border-bottom: 2px solid rgb(0, 8, 125);
+}
 .cards{
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  background-color: #F1F0E8;
+  box-shadow: 10px 10px 40px black;
 }
 .wave{
-  width: 500%;
+  width: 200px;
   position: relative;
   height: 40px;
   background-image: url(https://smartdemowp.com/yacher/wp-content/themes/yacher/assets/images/icon/footer-jik-jak.png);
@@ -107,7 +115,7 @@ z-index: 2;
 
 .cardoffer {
   position: relative;
-  height: 234px;
+  height: auto;
   color: #000000;
  
 }
@@ -115,28 +123,10 @@ z-index: 2;
   background-color: #004085;
   color: rgb(255, 255, 255);
   text-align: center;
-}
-.test{
-  position: absolute;
-  left: 844px;
-  width: 166px;
-  height: 295px;
-  background-color: YELLOW;
-  display: none;
- 
-}
-.cardoffer:hover{
-  cursor: pointer;
- 
-}
-.cardoffer:hover .test{
-display: block;
-box-shadow: -9px 5px 14px;
 
 }
-.cards2{
-  background-color:#F1F0E8;
-}
+
+
 .svg{
   width: 60px;
   height: 60px;
@@ -147,6 +137,7 @@ box-shadow: -9px 5px 14px;
   background-repeat: no-repeat;
   background-size: 100% 80px;
   height: 100px;
+  padding: 20px 0 20px 0;
 }
 
 .items {

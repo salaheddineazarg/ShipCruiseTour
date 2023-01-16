@@ -80,8 +80,8 @@
     </div>
   </div>
   <div class=" col-md-4 position-relative">
-    <label for="validationTooltip02" class="form-label">Cruise</label>
-    <input type="email" class="form-control" id="validationTooltip02"    required>
+    <label for="validationTooltip02"  class="form-label">Cruise</label>
+    <input type="text" value="<?php echo $getrow['name'] ?>" class="form-control" id="validationTooltip02"    required>
     <div class="valid-tooltip">
     Please choose a unique and valid cruise.
     </div>
@@ -90,7 +90,7 @@
     <label for="validationTooltipUsername" class="form-label">SHIP</label>
     <div class="input-group has-validation">
       
-      <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+      <input type="text" class="form-control"  value="<?php echo $getrow['shipname'] ?>" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
       <div class="invalid-tooltip">
         Please choose a unique and valid user SHIP.
       </div>
@@ -109,25 +109,25 @@
   </div>
   <div class=" col-md-4 position-relative">
     <label for="validationTooltip04" class="form-label">Price</label>
-    <input type="text" class="form-control" id="validationTooltip01"  required>
+    <input type="text" value="<?php echo $getrow['price'] ?>" class="form-control" id="validationTooltip01"  required>
     
     <div class="invalid-tooltip">
       Please select a valid Price.
     </div>
   
 </div>
-  <div class=" d-flex mb-4 date col-md-4  gap-2 position-relative">
+  <div class=" d-flex mb-4 date col-md-12  gap-2 position-relative">
     <div class=" d-flex flex-column">
-    <label for="validationTooltip05" class="form-label">DATE OF DEPART</label>
-    <input type="date" class="form-control" id="validationTooltip05" required>
+    <label for="validationTooltip05"  class="form-label">DATE OF DEPART</label>
+    <input type="text" value="<?php echo $getrow['date_departure'] ?>" class="form-control" id="validationTooltip05" required>
     <div class="invalid-tooltip">
       Please provide a valid Date.
     </div>
   </div>
     <div>TO</div>
       <div class="  d-flex flex-column">
-    <label for="validationTooltip05" class="form-label">DATE</label>
-    <input type="date" class="form-control" id="validationTooltip05" required>
+    <label for="validationTooltip05" class="form-label">DATE OF ARRIVAL</label>
+    <input type="text"  value="<?php echo $getrow['date_arrival'] ?>" class="form-control" id="validationTooltip05" required>
     <div class="invalid-tooltip">
       Please provide a valid Date.
     </div>

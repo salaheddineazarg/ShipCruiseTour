@@ -15,7 +15,7 @@ class GestionController  {
     $data['cruises']=$db->getAllCruises();
     $data['ports']=$db->getAllPorts();
     $data['ships']=$db->getAllShips();
-    $data['cardship']=$db->getAllShipcard();
+  
 
     View::load('gestion',$data);
 
@@ -85,8 +85,8 @@ $delete->deletecruise($id);
   {
      $db= new cruise();
      $data['getrow']=$db->getrow($id);
-     $data1['ports']=$db->getAllPorts();
-      View::load('update',$data,$data1);
+     $data['ports']=$db->getAllPorts();
+      View::load('update',$data);
       
   }
   // ----------------------------------------------------------------------------------------------------------

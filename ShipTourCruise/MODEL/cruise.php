@@ -221,7 +221,7 @@ public function updateport2($id_c,$id_p)
    {
       $this->conn = $this->connection();
 
-      $this->getrow = mysqli_query($this->conn, "SELECT* FROM `cruise` WHERE id_c= $id");
+      $this->getrow = mysqli_query($this->conn, "SELECT c.*,s.name as shipname FROM cruise c,ship s WHERE c.id_s=s.id_s AND c.id_c=$id");
 
       return mysqli_fetch_array($this->getrow);
    }

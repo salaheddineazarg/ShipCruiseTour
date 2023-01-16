@@ -1,6 +1,34 @@
 <?php require(view.'include/header.php') ?>
 <body>
-<?php require(view.'include/navbar.php') ?>
+<nav class="navbar nav  navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <div class="logodesign">
+      <img class="logoheader" src="<?php url('Public/IMAGE2/logo.png') ?>" alt="">
+    </div>
+    <button onclick=" navbar();" id="toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="<?php url('home/index') ?>">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light "  href="<?php url('booking/index') ?>">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light "  href="<?php url('gestion/index') ?>">Gestion</a>
+        </li>
+       
+      
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+
 <div class="cover-update container-fluid">
 
 <form class="d-flex flex-column gap-3 form-update"   enctype="multipart/form-data" method="POST"  action="<?php url('gestion/updateproducts/'.$getrow['id_c'])?>" >
