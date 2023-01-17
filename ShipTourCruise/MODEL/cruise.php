@@ -48,11 +48,11 @@ class cruise extends database
    public function getAllTrajet($id)
    {
       $this->conn = $this->connection();
-      $this->select = mysqli_query($this->conn, 'SELECT * FROM `cruise` c ,trajet t,  port p WHERE c.id_c=t.id_c AND t.id_p=p.id_p AND c.id_c='.$id.' ');
+      $this->select = mysqli_query($this->conn, "SELECT c.id_c,t.*,p.* FROM cruise c ,trajet t, port p WHERE c.id_c=t.id_c AND t.id_p=p.id_p AND c.id_c=$id");
 
       if ($this->select) {
-         $result=mysqli_fetch_all( $this->select,MYSQLI_ASSOC);
-         return $result;
+         
+         return mysqli_fetch_all($this->select,MYSQLI_ASSOC);
       }
    }
 
@@ -79,7 +79,8 @@ class cruise extends database
       if ($this->select) {
         
          
-         return mysqli_fetch_all( $this->select,MYSQLI_ASSOC);;
+         // return mysqli_fetch_all( $this->select,MYSQLI_ASSOC);
+         return $this->select;
         
       }else {
          

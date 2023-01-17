@@ -3,10 +3,13 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family: "Poppins",sans-serif;
+ 
+   
 }
 body{
   overflow-x: hidden;
+  background-color: #F3F5FA;
+  font-family: "Open Sans", sans-serif;
 }
 
 .logo{
@@ -70,34 +73,41 @@ z-index: 2;
   left: 44%;
   background-color:#004085;
 }
-
-.title-h1{
-  width: 96%;
-  font-size: 50px;
-  font-weight: 500;
-  font-style: italic;
-  font-family: "cooper",sans-serif;
-  border-bottom: 2px solid rgb(0, 8, 125);
+.cta {
+  background: linear-gradient(rgba(26 106 161 / 60%), rgba(12 60 76 / 95%)) , url("https://images.pexels.com/photos/2678418/pexels-photo-2678418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
 }
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+.cta p {
+  color: #fff;
+}
+.cta .cta-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+  text-decoration: none;
+}
+
+
+/* 
 .cards{
   box-shadow: 10px 10px 40px black;
-}
-.wave{
-  width: 200px;
-  position: relative;
-  height: 40px;
-  background-image: url(https://smartdemowp.com/yacher/wp-content/themes/yacher/assets/images/icon/footer-jik-jak.png);
-  background-repeat: repeat-x;
-  animation: movewive   50s linear infinite;
-  
-}
-.ship{
-    position: relative;
-    bottom: 70px;
-    left: 40%;
-    width: 80px;
-    animation: moveship 2s linear infinite;
-}
+} */
+
 
 @keyframes movewive{
   100%{transform: translateX(-2000px);}
@@ -120,7 +130,7 @@ z-index: 2;
  
 }
 .place-content{
-  background-color: #004085;
+  background-color: #0083fd;
   color: rgb(255, 255, 255);
   text-align: center;
 
@@ -167,6 +177,35 @@ z-index: 2;
   height: 472px; 
 
 }
+
+.p-y-2 {
+padding-top: 28px;
+padding-bottom: 28px;
+}
+.p-y-3 {
+padding-top: 45px;
+padding-bottom: 45px;
+}
+.m-b-1 {
+margin-bottom: 18px; 
+}
+.m-t-1 { 
+margin-top: 18px;
+}
+
+.main_counter_area{
+  
+  background-size: cover;
+  overflow: hidden;
+}
+.main_counter_area .main_counter_content .single_counter{
+  background: #046dd6;
+      color: #fff;
+}
+.main_counter_area .main_counter_content .single_counter i{
+  font-size:36px;
+}
+
 /* BOOKING */
 
 .search-form #search-form {
@@ -227,7 +266,7 @@ z-index: 2;
 /*  ABOUT */
 .about-i i{
   font-size: 50px;
-  color: #D60D45;
+  color: #ffdc12;
   height: 60px;
   width: 60px;
   line-height: 1;
@@ -240,7 +279,7 @@ z-index: 2;
   height:  278px;
  }
  .team-content {
-  background: #D60D45;
+  background: #ffdc12;
   width: 100%;
   margin: 0 auto;
   padding: 15px 0;
@@ -248,9 +287,190 @@ z-index: 2;
   bottom: 20px;
   text-align: center;
   }
+
+
+
+
+  .h2 {
+    color: #37517e;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    position: relative;
+    margin: 25px 0 50px;
+  }
+  .h2::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #ffdc12;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+  }
+  .carousel1 {
+    width: 650px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  .carousel1 .carousel-item {
+    color: #999;
+    font-size: 14px;
+      text-align: center;
+    overflow: hidden;
+      min-height: 340px;
+  }
+  .carousel1 .carousel-item span {
+    background-color: #eb7245;
+  }
+  .carousel1 .img-box {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .carousel1 .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+  }
+  .carousel1 .testimonial {	
+    padding: 30px 0 10px;
+  }
+  .carousel1 .overview {	
+    text-align: center;
+    padding-bottom: 5px;
+  }
+  .carousel1 .overview b {
+    color: #333;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: block;	
+    padding-bottom: 5px;
+  }
+  .carousel1 .star-rating i {
+    font-size: 18px;
+    color: #ffdc12;
+  }
+  .carousel1 .carousel-control {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffc107;
+      text-shadow: none;
+    top: 4px;
+  }
+  .carousel-control i {
+    font-size: 20px;
+    margin-right: 2px;
+  }
+  .carousel-control.left {
+    left: auto;
+    right: 40px;
+  }
+  .carousel-control.right i {
+    margin-right: -2px;
+  }
+  .carousel1 .carousel-indicators {
+    bottom: 15px;
+  }
+  .carousel-indicators li, .carousel-indicators li.active {
+    width: 11px;
+    height: 11px;
+    margin: 1px 5px;
+    border-radius: 50%;
+  }
+  .carousel-indicators li {	
+    background: #e2e2e2;
+    border-color: transparent;
+  }
+  .carousel-indicators li.active {
+    border: none;
+    background: #888;		
+  }
+  
 .cards-team{
   background-color: #fff4e6;
 }
+/* LOGIN */
+
+.form-control{
+  height: 41px;
+  background: #f2f2f2;
+  box-shadow: none !important;
+  border: none;
+}
+.form-control:focus{
+  background: #e2e2e2;
+}
+  .form-control, .btn{        
+      border-radius: 3px;
+  }
+.signup-form{
+  width: 390px;
+  margin: 30px auto;
+}
+.signup-form form{
+  color: #999;
+  border-radius: 3px;
+    margin-bottom: 15px;
+      background: #fff;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+  }
+.signup-form h2 {
+  color: #333;
+  font-weight: bold;
+      margin-top: 0;
+  }
+  .signup-form hr {
+      margin: 0 -30px 20px;
+  }    
+.signup-form .form-group{
+  margin-bottom: 20px;
+}
+.signup-form input[type="checkbox"]{
+  margin-top: 3px;
+}
+.signup-form .row div:first-child{
+  padding-right: 10px;
+}
+.signup-form .row div:last-child{
+  padding-left: 10px;
+}
+  .signup-form .btn{        
+      font-size: 16px;
+      font-weight: bold;
+  background: #3598dc;
+  border: none;
+  min-width: 140px;
+  }
+.signup-form .btn:hover, .signup-form .btn:focus{
+  background: #2389cd !important;
+      outline: none;
+}
+  .signup-form a{
+  color: #fff;
+  text-decoration: underline;
+}
+.signup-form a:hover{
+  text-decoration: none;
+}
+.signup-form form a{
+  color: #3598dc;
+  text-decoration: none;
+}	
+.signup-form form a:hover{
+  text-decoration: underline;
+}
+  .signup-form .hint-text {
+  padding-bottom: 15px;
+  text-align: center;
+  }
 /* CONTACT */
 
 .img-contact{
