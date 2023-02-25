@@ -55,8 +55,8 @@ class GestionController  {
         
    }
      }
-     $cruises=new cruise();
-     $cruises->insertcruise($_POST['name'],$_POST['desc'], $_POST['price'],$newImageName,$_POST['nights'],$_POST['port_depart'],$_POST['date'],$_POST['datefinal'],$_POST['ship'],$_POST['checkport']);
+     $cruises = new cruise();
+     $cruises->insertcruise($_POST['name'],$_POST['desc'],$_POST['price'],$newImageName,$_POST['nights'],$_POST['port_depart'],$_POST['date'],$_POST['datefinal'],$_POST['ship'],$_POST['checkport']);
      
 
       header("location:".url2('gestion/index'));

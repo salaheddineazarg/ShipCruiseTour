@@ -8,7 +8,7 @@ class View
         if(file_exists($file))
         {   
         extract($view_data);
-       
+
          ob_start();
         require_once(view.$view_name.'.php');
      
@@ -19,6 +19,7 @@ class View
     
       
     }
+
 }
 
 ?>

@@ -118,9 +118,9 @@
 
            
 
-                   <div  data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="row mb-2 p-2 bg-white border  rounded">
-                       <div class="col-md-3 mt-1">
-                           <img class="img-fluid img-responsive h-100 product-image"
+                   <div  data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="row mb-2 p-2 bg-white border  rounded cards_pg">
+                       <div class="col-md-3 mt-1" style="height:204px;">
+                           <img class="img-fluid h-100 w-100 img-responsive ";
                                src="<?php url('Public/IMAGE2/'.$row['image']) ?>">
                        </div>
                        <div class="col-md-6 mt-1">
@@ -162,7 +162,24 @@
                
                    <?php } ?>
 
+                   <div class="pagination_rounded">
+                        <ul>
+                            <li>
+                                <a href="<?php url('booking/index/'.$i-1) ?>" class="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i> Prev </a>
+                            </li>
+                            <?php for( $i =1 ; $i <= $total_pages ; $i++ ) : ?>
+                            <li>
+                                <a href="<?php url('booking/index/'.$i) ?>"><?= $i ?></a>
+                            </li>
+							 <?php endfor ?>
+
+                            <li><a href="<?php url('booking/index/'.$i+1) ?>" class="next"> Next <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
        </section>
+       <script src="<?php url('Public/js/pagination.js') ?>"></script>
        <!-- ---------------------- -->
        <?php require(view.'include/footer.php') ?>
 

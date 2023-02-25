@@ -38,6 +38,7 @@ width: 100%;
 z-index: 2;
 
 }
+
 .nav2{
   background-color: #004085;
 }
@@ -584,7 +585,19 @@ margin-top: 18px;
     height: 70vh;
    
 }
+
 .images{
 
   width: 460px;
 }
+.image-table{
+  height: 50px;
+  width: 50px;
+}
+.myreserve{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,9,121,1) 20%, rgba(0,212,255,1) 61%);
+}
+
+
+

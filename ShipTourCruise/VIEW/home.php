@@ -3,7 +3,9 @@
 ?>
 
 <body>
-    <?php require(view.'include/navbar.php') ?>
+
+
+<?php require(view.'include/navbar.php') ?> 
 
 
     <!-- end nav -->
@@ -34,77 +36,36 @@
     
       
         <div class="row gap-5 p-4 w-100 mb-5    justify-content-center ">
+
+    
+  <div  data-aos="zoom-in" id="imageBox">
+   
+      <img id="image" class="" src="https://images.pexels.com/photos/6937301/pexels-photo-6937301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+  
+      <div class="title text-center text-light"><p class="p"> BALI</p></div>
+
+  </div>
+  <div  data-aos="zoom-in" id="imageBox">
+   
+   <img id="image" src="https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+
+   <div class="title text-center text-light"><p class="p">MALDIVE</p></div>
+
+</div>
+<div  data-aos="zoom-in" id="imageBox">
+   
+   <img id="image" src="https://images.pexels.com/photos/4685189/pexels-photo-4685189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+
+   <div class="title text-center text-light"><p class="p">MONACO</p></div>
+
+</div>
+
+
             
-            <div class="col-lg-3 cards col-md-6">
-                <div class="team-item">
-                    <div class="team-image">
-                        <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
-                    </div>
-                    <div class="place-content">
-                        <h3>BALI</h3>
-                        <p>Top Place</p>
-                    </div>
-                </div>
-            </div>
+         
             <!-- --------------- -->
 
-            <div class="col-lg-3 cards  col-md-6">
-                <div class="team-item">
-                    <div class="team-image">
-                        <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
-                    </div>
-                    <div class="place-content">
-                        <h3>MALDIVE</h3>
-                        <p>Top Place</p>
-                    </div>
-                </div>
-            </div>
-            <!-- -------------- -->
-            <div class="col-lg-3 cards  col-md-6">
-                <div class="team-item">
-                    <div class="team-image">
-                        <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
-                    </div>
-                    <div class="place-content">
-                        <h3>MONACO</h3>
-                        <p>Top Place</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 cards  col-md-6">
-                <div class="team-item">
-                    <div class="team-image">
-                        <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
-                    </div>
-                    <div class="place-content">
-                        <h3>VENICE</h3>
-                        <p>Top Place</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 cards  col-md-6">
-                <div class="team-item">
-                    <div class="team-image">
-                        <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
-                    </div>
-
-                    <div class="place-content ">
-                        <h3>MIAMI</h3>
-                        <p>Top Place</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 cards col-md-6">
-                <div class="team-item">
-                    <div class="team-image">
-                        <img class="image-team" src="<?php url('Public/IMAGE2/image1.jpg') ?>" alt="Image">
-                    </div>
-                    <div class="place-content">
-                        <h3>BARCELONA</h3>
-                        <p>Top Place</p>
-                    </div>
-                </div>
-            </div>
+           
             <!-- ---------------------- -->
     </section>
 
@@ -354,7 +315,7 @@
                                 <div class="col-md-3">
                                     <div class="single_counter p-y-2 m-t-1">
                                     <i class="fa-solid fa-location-dot m-b-1"></i>
-                                        <h2 class="statistic-counter">80</h2>
+                                        <h2 class="statistic-counter num" data-val="80">0</h2>
                                         <span></span>
                                         <p>Destination</p>
                                     </div>
@@ -362,21 +323,21 @@
                                 <div class="col-md-3">
                                     <div class="single_counter p-y-2 m-t-1">
                                         <i class="fa-solid fa-face-smile m-b-1"></i>
-                                        <h2 class="statistic-counter">1000</h2>
+                                        <h2 class="statistic-counter num" data-val="1000">0</h2>
                                         <p>Satisfied</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="single_counter p-y-2 m-t-1">
                                         <i class="fa-solid fa-anchor m-b-1"></i>
-                                        <h2 class="statistic-counter">80</h2>
+                                        <h2 class="statistic-counter num" data-val="80">0</h2>
                                         <p>Port</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="single_counter p-y-2 m-t-1">
                                     <i class="fa-solid fa-ship m-b-1"></i>
-                                        <h2 class="statistic-counter">20</h2>
+                                        <h2 class="statistic-counter num" data-val="20">0</h2>
                                         <p>Ships</p>
                                     </div>
                                 </div>
@@ -392,7 +353,6 @@
 
 
 
-
-
+ 
     <!-- FOOTER -->
     <?php require(view.'include/footer.php') ?>

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class   CruiseController
 {
     public function index(){

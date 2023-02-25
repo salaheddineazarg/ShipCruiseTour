@@ -18,8 +18,8 @@
                     <input name="desc" type="text" class="form-control" placeholder="description"
                         aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                     <h6>FROM</h6>
-                    <input name="date" type="datetime-local" class="form-control" aria-label="Recipient's username"
-                        aria-describedby="basic-addon2" required>
+                    <input name="date" type="datetime-local" class="form-control" 
+                            required>
                     <h6>TO</h6>
                     <input name="datefinal" type="datetime-local" class="form-control" aria-label="Recipient's username"
                         aria-describedby="basic-addon2" required>
@@ -61,4 +61,7 @@
             </div>
         </div>
     </div>
-</div>
+                        </div>
+
+     <script src="<?php url('Public/js/date.js')?>"></script>
+     
