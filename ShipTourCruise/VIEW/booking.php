@@ -2,6 +2,8 @@
 
    <body>
        <?php require(view.'include/navbar.php') ?>
+      
+
 
 
 
@@ -61,47 +63,50 @@
            <div class="container">
                <div class="row">
                    <div class="col-lg-12">
-                       <form id="search-form" method="POST" action="<?php url('booking/index') ?>">
-                           <div class="row">
+                       <form id="search-form" method="POST" action="<?php url('booking/index/1') ?>">
+                           <div class="row w-100">
                                <div class="col-lg-2">
                                    <h4>Sort Deals By:</h4>
                                </div>
+                               
                                <div class="col-lg-2">
                                    <fieldset>
 
                                        <select name="port" class="form-select" aria-label="Default select example"
                                            id="chooseLocation" onchange="this.form.click()">
-                                           <option selected>PORTS</option>
-                                           <?php foreach( $ports as $row ) {?>
+                                           <option selected></option>
+                                           <?php foreach( $ports as $row ) :?>
                                            <option value="<?php echo $row['Country'] ?>"><?php echo $row['Country'] ?>
                                            </option>
-                                           <?php } ?>
+                                           <?php endforeach ?>
                                        </select>
 
                                    </fieldset>
                                </div>
                                <div class="col-lg-2">
+                               
                                    <fieldset>
-                                       <select name="ship" class="form-select" aria-label="Default select example"
+                                       <select name="ship"  class="form-select" 
                                            id="choosePrice" onchange="this.form.click()">
-                                           <option selected="">SHIP</option>
-                                           <?php foreach( $ships as $row ) {?>
+                                           <option selected=""></option>
+                                           <?php foreach( $ships as $row ) :?>
                                            <option><?php echo $row['name'] ?></option>
-                                           <?php } ?>
+                                           <?php endforeach ?>
                                        </select>
                                    </fieldset>
                                </div>
 
                                <div class="col-lg-3">
-                                   <input name="date" type="datetime-local" class="form-control"
-                                       aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                   <input name="date" type="month"  class="form-control">
                                </div>
+                              
                                <div class="col-lg-2">
                                    <fieldset>
                                        <button type="submit" name="submit" class="border-button">Search Results</button>
                                    </fieldset>
                                </div>
                            </div>
+                           
                        </form>
                    </div>
                </div>
@@ -114,7 +119,7 @@
       <section class="container mt-lg-3">
 
                  
-               <?php foreach ($cruises as $row){ ?>
+               <?php foreach ($cruises as $row): ?>
 
            
 
@@ -135,6 +140,7 @@
 
                                <p><i> Start From*</i></p>
                                <div class="d-flex gap-4">
+                               <p><?= $row['date_departure'] ?></p>
                                    <div class="d-flex">
                                        <i class="fa-solid fa-location-dot text-danger"></i>
                                        <p><?php echo $row['port_departeure'] ?></p>
@@ -160,14 +166,14 @@
                        </div>
                    </div>
                
-                   <?php } ?>
+                   <?php endforeach ?>
 
                    <div class="pagination_rounded">
                         <ul>
                             <li>
                                 <a href="<?php url('booking/index/'.$i-1) ?>" class="prev"> <i class="fa fa-angle-left" aria-hidden="true"></i> Prev </a>
                             </li>
-                            <?php for( $i =1 ; $i <= $total_pages ; $i++ ) : ?>
+                            <?php for( $i = 1 ; $i <= $total_pages ; $i++ ) : ?>
                             <li>
                                 <a href="<?php url('booking/index/'.$i) ?>"><?= $i ?></a>
                             </li>
@@ -179,11 +185,44 @@
                     </div>
 
        </section>
-       <script src="<?php url('Public/js/pagination.js') ?>"></script>
+       <a href="" class="position-relative">
+        <img class="reload" src="<?php url('Public/IMAGE2/reload.svg') ?>" alt="">
+</a>
+       
        <!-- ---------------------- -->
        <?php require(view.'include/footer.php') ?>
 
 
 
-       <!-- FOOTER -->
+    
+      <style>
+      .reload{
+        width: 58px;
+        position: fixed;
+        left: 95%;
+        top: 500px;
+        cursor: pointer;
+        border-radius:50%; 
+        animation-name: ;
+         animation: reloadAnim 2s forwards ;
+        
+        
+          }
+
+          @keyframes reloadAnim {
+            0%{
+                transform: rotate(16deg);
+            }
+            50%{
+                transform: rotate(45deg);
+            } 
+            100%{
+                transform: rotate(100deg);
+            }        
+        
+        }
+
+      </style>
       
+
+     

@@ -6,7 +6,7 @@ class ReservationController
     public function index($id)
     {
         if(isset($_SESSION['role']) && $_SESSION['role'] == 'client') {
-
+      
 
             $db = new cruise();
         $data['trajets'] = $db->getAllTrajet($id);
@@ -46,9 +46,25 @@ class ReservationController
         $reserv = new token();
 
     
-       $reserv->addreservation($id_user,$id,$_POST['chambre'],$price[0]);
+      $check = $reserv->addreservation($id_user,$id,$_POST['chambre'],$price[0]);
+      if($check){
+          header("location:" . url2('MyReservation/index/'.$id_user));
+      }else{
+  
+        
 
-                header("location:" . url2('MyReservation/index/'.$id_user));
+        
+        header("location:".$_SERVER['HTTP_REFERER']);
+        $_SESSION['message'] = true;
+    }
+
+      }else{
+          
+    
+            header("location:".$_SERVER['HTTP_REFERER']);
+        }
+
+              
       
         }
         else{
@@ -58,10 +74,6 @@ class ReservationController
         }
 
 
-        }else{
-          
-    
-            header("location:".$_SERVER['HTTP_REFERER']);
         }
       
    
@@ -71,6 +83,6 @@ class ReservationController
     }
 
     
-}
+
 
 ?>

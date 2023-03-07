@@ -47,11 +47,11 @@ class cruise extends database
    {
       $this->conn = $this->connection();
       $this->select = mysqli_query($this->conn, 'SELECT COUNT(*)
-      FROM cruise');
+      FROM cruise WHERE date_departure > NOW()');
 
       if ($this->select) {
          $number =  intval( mysqli_fetch_column($this->select));
-          $number = ceil($number/4)  ;
+          $number = ceil($number/4) ;
            
          return $number;
       }
@@ -134,23 +134,60 @@ class cruise extends database
 
 
    // ------------------------------FILTRE----------------------------------------------------------
-   public function filtre($port, $date, $ship)
+   public function filtre($port,$date,$ship)
    {
       $this->conn = $this->connection();
 
+      
+      $request ="SELECT c.*, s.name as shipname 
+      FROM cruise c 
+      INNER JOIN ship s ON c.id_s = s.id_s WHERE c.date_departure > NOW() AND ";
+      $query="";
 
-      $this->select = mysqli_query($this->conn, "SELECT DISTINCT c.*,s.name as shipname,p.Country,t.id_p FROM cruise c,ship s ,port p,trajet t WHERE c.id_s=s.id_s AND p.id_p=t.id_p AND t.id_c=c.id_c AND c.port_departeure='$port' AND '$date ' < c.date_departure AND s.name='$ship' LIMIT 1");
 
+      if(isset($port) && !empty($port) && isset($ship) && !empty($ship) && isset($date) && !empty($date) ){
+         $query ="SELECT c.*, s.name as shipname 
+         FROM cruise c 
+         INNER JOIN ship s ON c.id_s = s.id_s WHERE  c.port_departeure = '$port' AND s.name = '$ship' AND '$date' =  MONTH(c.date_departure)";
+       
+       }
 
+      if(isset($port) && !empty($port)){
+      $query = $request ."c.port_departeure = '$port' ";
+  
+    
+   
+      }
+     
+     
+     
+       if (isset($ship) && !empty($ship)){
+         
+     
+         
+         $query= $request ."s.name = '$ship' OR ";
+       
+      }
+      if(isset($date) && !empty($date)){
+         $date= explode("-",$date);
+
+          $date=$date[1];
+
+         $query = $request ." '$date' = MONTH(c.date_departure)";
+
+         
+
+      }
+   
+           $this->select = mysqli_query($this->conn,$query);
+
+  
       if ($this->select) {
 
 
+      
+         return mysqli_fetch_all($this->select,MYSQLI_ASSOC);
 
-         return $this->select;
-
-      } else {
-
-         return false;
       }
    }
 
@@ -354,39 +391,33 @@ class cruise extends database
    }
 
    // // ---------------------------------------------------------------------------
-   public function getResults($page, $results_per_page)
-   {
-      $offset = ($page - 1) * $results_per_page;
-      $query = "SELECT * FROM cruise LIMIT $offset, $results_per_page";
-      $result = mysqli_query($this->conn, $query);
-
-      $results = array();
-      while ($row = $result->fetch_assoc()) {
-         $results[] = $row;
-      }
-
-      return $results;
-   }
-
+  
 
    public function queryPaginated($id)
    {
        $this->conn = $this->connection();
 
-      $query = 'SELECT c.*, s.name as shipname 
-   FROM cruise c 
-   INNER JOIN ship s ON c.id_s = s.id_s ';
 
          $Limit = 4;
 
          $page = isset($id) ? $id : 1;
          $offset = ($page - 1) * $Limit;
-         $query = $query . " limit {$Limit} OFFSET $offset ";
+         $query =" SELECT c.*, s.name as shipname 
+         FROM cruise c 
+         INNER JOIN ship s ON c.id_s = s.id_s WHERE c.date_departure > NOW() limit {$Limit} OFFSET $offset ";
+
+
          $this->select = mysqli_query($this->conn, $query);
 
 
          return mysqli_fetch_all($this->select,MYSQLI_ASSOC);
       
+   }
+
+
+   public function getCapacity(){
+
+
    }
    
 

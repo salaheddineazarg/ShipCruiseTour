@@ -15,14 +15,12 @@
             src=" https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="">
         <div class="offer text-center">
-            <h1>OFFERS 30%</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident quis iusto doloremque ducimus
-                molestias quos voluptate, corrupti sit quasi quod voluptates itaque enim non. Expedita nemo dicta id
-                corporis consequatur!</p>
+            <h1 class="quote">Life is Better on</h1>
+            <h1 class="h1 display-1 textHeader">CRUISE</h1>
+            
         </div>
         <a class="btn text-light book" href="<?php url('booking/index') ?>">BOOK NOW </a>
     </div>
-
 
 
     
@@ -108,6 +106,7 @@
        
        <p><i> Start From*</i></p>
       <div class="d-flex gap-4">
+        
    <div class="d-flex">
    <i class="fa-solid fa-location-dot text-danger"></i>
     <p><?php echo $row['port_departeure'] ?></p>
@@ -145,17 +144,13 @@
   
 
 
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-  
-        <!-- """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" -->
         <h1  class=" h2 ">What you get</h1>
 
        <section class="d-flex mb-4 sides position-relative" style="height:98vh;">
         <div style="background-color:#F1F0E8; width:899px">
         </div>
 
-        <div class="blue-side" style="background-color:#004085; width:364px">
+        <div class="blue-side" style="background-color:#004085; width:500px">
         </div>
 
 

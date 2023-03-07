@@ -14,7 +14,7 @@
           <a class="nav-link active" aria-current="page" href="<?php url('home/index') ?>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light "  href="<?php url('booking/index') ?>">Booking</a>
+          <a class="nav-link text-light "  href="<?php url('booking/index/1') ?>">Booking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light "  href="<?php url('gestion/index') ?>">Gestion</a>

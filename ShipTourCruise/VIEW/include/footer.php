@@ -117,7 +117,8 @@
 AOS.init();
 </script>
 
-<script src="<?php url('Public/toggle.js')?>"></script>
+<script src="<?php url('Public/js/toggle.js')?>"></script>
+<script src="<?php url('Public/js/navBar.js') ?>"></script>
 
 </body>
 

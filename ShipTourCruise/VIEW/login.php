@@ -34,29 +34,30 @@
       </div>
       <div class="modal-body">
       <div class="signup-form">
-    <form action="<?php url('login/register') ?>" method="POST">
+    <form id="form" action="<?php url('login/register') ?>" method="POST">
 		<h2>Sign Up</h2>
 		<p>Please fill in this form to create an account!</p>
 		<hr>
         <div class="form-group">
 			<div class="row">
-				<div class="col-sm-6 mb-xs-3"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+				<div class="col-sm-6 mb-xs-3">
+          <input type="text" class="form-control" name="first_name" placeholder="First Name" ></div>
 				<div class="col-sm-6">
-          <input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+          <input type="text" class="form-control name"  name="last_name" placeholder="Last Name" ></div>
 			</div>        	
         </div>
         <div class="form-group">
-        	<input type="text" class="form-control" name="username" placeholder="Username" required="required">
+        	<input type="text" class="form-control name" name="username" placeholder="Username" >
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            <input type="password" class="form-control name" name="password" placeholder="Password">
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="confirme_password" placeholder="Confirm Password" required="required">
+            <input type="password" class="form-control name" name="confirme_password" placeholder="Confirm Password" >
         </div>        
-    
+           <p id="message"></p>
 		<div class="form-group">
-            <button type="submit" type="submit" name="submit" class="btn btn-primary btn-lg">Sign Up</button>
+            <button type="submit"  name="submit" class="btn btn-primary btn-lg">Sign Up</button>
         </div>
          <div class="modal-footer">
    <div class="hint-text">Already have an account? <a href="#">Login here</a></div>
@@ -72,7 +73,9 @@
 
 
 <!-- JavaScript Bundle with Popper -->
+<script src="<?php url('Public/js/validation.js')?>"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

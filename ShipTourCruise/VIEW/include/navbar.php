@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?php url('home/index') ?>">Home</a>
+          <a class="nav-link active text-light " aria-current="page" href="<?php url('home/index') ?>">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light "  href="<?php url('booking/index/1') ?>">Booking</a>
@@ -22,27 +22,29 @@
           <a class="nav-link text-light "  href=" <?php url('contact/index') ?>">Contact</a>
         </li>
         <li class="nav-item">
-           <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'client'){?>
-
+           <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'client')  :?>
+           
               <a class="nav-link text-light "  href="<?php url('myReservation/index/'.$_SESSION['user'])?>">Myreservation</a>
           
-             <?php } else {?>
+             <?php endif ; ?>
 
              
 
-             <?php }?>
+            
         
         </li>
         <li class="nav-item">
-           <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'client'){?>
+           <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'client') :?>
 
-              <a class="nav-link text-light "  href=" <?php url('login/logout') ?>">Logout</a>
+            <a class="nav-link text-light "  href=" <?php url('login/logout') ?>"  >Logout</a> 
           
-             <?php } else {?>
-
+          
+          
+             <?php  else : ?>
+             
               <a class="nav-link text-light "  href=" <?php url('login/index') ?>">Login</a>
 
-             <?php }?>
+              <?php endif ; ?>
         
         </li>
         
@@ -51,6 +53,9 @@
     </div>
   </div>
 </nav>
+
+
+
 
 
 <style>
@@ -62,13 +67,10 @@ color: #fff;
 }
 </style>
 
-<script >
-  var togle = document.getElementById("toggle");
-var nav = document.getElementById("nav");
-
-togle.addEventListener("click", () => {
+<!-- <script >
   
-  nav.classList.toggle("sideblack");
-});
 
-</script>
+
+</script> -->
+
+

@@ -3,8 +3,12 @@ var counter = document.querySelectorAll(".num");
 
 
     window.onscroll= function (){
-      
-  if(window.scrollY >= section.offsetTop){
+       var test = section.offsetTop - 100
+      console.log(test)
+      setTimeout(console.log(window.scrollY),2000);
+
+  if(test <= window.scrollY){
+
     
     counter.forEach((element)=>{
           const count = parseInt(element.getAttribute("data-val"));

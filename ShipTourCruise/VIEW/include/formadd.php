@@ -18,10 +18,10 @@
                     <input name="desc" type="text" class="form-control" placeholder="description"
                         aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                     <h6>FROM</h6>
-                    <input name="date" type="datetime-local" class="form-control" 
+                    <input id="date-inpute" min="" name="date" type="datetime-local" class="form-control" 
                             required>
                     <h6>TO</h6>
-                    <input name="datefinal" type="datetime-local" class="form-control" aria-label="Recipient's username"
+                    <input id="dateto" min="" name="datefinal" type="datetime-local" class="form-control" aria-label="Recipient's username"
                         aria-describedby="basic-addon2" required>
                     <input accept=".jpg,jpeg,.png" name="imageadd" type="file" class="form-control" required>
                     <input name="nights" type="number" class="form-control" placeholder="n°nights"
@@ -62,6 +62,7 @@
         </div>
     </div>
                         </div>
+     
 
      <script src="<?php url('Public/js/date.js')?>"></script>
      
